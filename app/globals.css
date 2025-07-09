@@ -1,0 +1,273 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 255, 255, 255;
+  --background-start-rgb: 17, 24, 39;
+  --background-end-rgb: 31, 41, 55;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 17, 24, 39;
+    --background-end-rgb: 31, 41, 55;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217.2 91.2% 59.8%;
+    --primary-foreground: 222.2 84% 4.9%;
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 224.3 76.3% 94.1%;
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+    --radius: 0.5rem;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-gradient-to-br from-slate-900 via-gray-900 to-black text-foreground;
+    background-attachment: fixed;
+    overflow-x: hidden;
+    font-size: 16px;
+    line-height: 1.6;
+  }
+}
+
+/* Professional Typography System */
+.heading-xl {
+  font-size: 2rem; /* 32px */
+  line-height: 1.2;
+  font-weight: 700;
+}
+
+.heading-lg {
+  font-size: 1.75rem; /* 28px */
+  line-height: 1.3;
+  font-weight: 600;
+}
+
+.heading-md {
+  font-size: 1.5rem; /* 24px */
+  line-height: 1.4;
+  font-weight: 600;
+}
+
+.subheading-lg {
+  font-size: 1.25rem; /* 20px */
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.subheading-md {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.body-lg {
+  font-size: 1.125rem; /* 18px */
+  line-height: 1.7;
+  font-weight: 400;
+}
+
+.body-md {
+  font-size: 1rem; /* 16px */
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+.caption {
+  font-size: 0.875rem; /* 14px */
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+/* Professional Spacing System */
+.section-spacing {
+  padding-top: 3.5rem; /* 56px */
+  padding-bottom: 3.5rem; /* 56px */
+}
+
+.content-spacing {
+  margin-bottom: 1.5rem; /* 24px */
+}
+
+.paragraph-spacing {
+  margin-bottom: 1.25rem; /* 20px */
+}
+
+/* Professional Color Palette */
+.text-primary {
+  color: #f97316; /* Orange 500 */
+}
+
+.text-secondary {
+  color: #64748b; /* Slate 500 */
+}
+
+.text-accent {
+  color: #3b82f6; /* Blue 500 */
+}
+
+/* Clean Card Design */
+.professional-card {
+  background: rgba(30, 41, 59, 0.8);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(148, 163, 184, 0.1);
+  border-radius: 0.75rem;
+  transition: all 0.3s ease;
+}
+
+.professional-card:hover {
+  background: rgba(30, 41, 59, 0.9);
+  border-color: rgba(249, 115, 22, 0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3);
+}
+
+/* Clean Button Styles */
+.btn-primary {
+  background: linear-gradient(135deg, #f97316, #ea580c);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+}
+
+.btn-primary:hover {
+  background: linear-gradient(135deg, #ea580c, #dc2626);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(249, 115, 22, 0.3);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: #f97316;
+  border: 2px solid #f97316;
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #f97316;
+  color: white;
+}
+
+/* Simplified Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Clean Grid System */
+.grid-container {
+  display: grid;
+  gap: 2rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+/* Responsive Typography */
+@media (max-width: 768px) {
+  .heading-xl {
+    font-size: 1.75rem; /* 28px */
+  }
+  
+  .heading-lg {
+    font-size: 1.5rem; /* 24px */
+  }
+  
+  .heading-md {
+    font-size: 1.25rem; /* 20px */
+  }
+  
+  .section-spacing {
+    padding-top: 2.5rem; /* 40px */
+    padding-bottom: 2.5rem; /* 40px */
+  }
+}
+
+/* Clean Scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #f97316;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ea580c;
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus states for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid #f97316;
+  outline-offset: 2px;
+}
+
+/* Remove excessive animations for reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
