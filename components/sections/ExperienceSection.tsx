@@ -13,9 +13,9 @@ export function ExperienceSection() {
   const experiences = [
     {
       title: "Full Stack Developer Intern",
-      company: "DailyMandir",
+      company: "NextHealthcare",
       location: "Remote",
-      duration: "Present",
+      duration: "May 2025 - July 2025",
       description: "Leading development of scalable web applications using React, Node.js, and cloud technologies. Mentoring junior developers and architecting solutions for enterprise clients.",
     },
   ];
